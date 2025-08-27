@@ -163,7 +163,9 @@ All colors MUST be HSL.
   background: rgba(0, 0, 0, 0.05);
   animation: float 6s ease-in-out infinite alternate;
   z-index: 0; /* make sure it's behind everything */
+  }
 }
+
 /*added this now */
 .circle1 {
   width: 150px;
@@ -186,6 +188,4 @@ All colors MUST be HSL.
   to {
     transform: translateY(20px);
   }
-}
-
 }
