@@ -29,7 +29,7 @@ const App = () => (
           </div>
         </div>
 
-        {/* Toast + UI providers */}
+        {/* Toasts */}
         <Toaster />
         <Sonner />
       </BrowserRouter>
