@@ -166,21 +166,20 @@ All colors MUST be HSL.
   }
 }
 
-/* Floating background shapes */
 .background-shape {
   position: absolute;
   animation: float 6s ease-in-out infinite alternate;
   opacity: 0.08;
-  z-index: -1; /* safer than 0, guarantees it's behind content */
+  z-index: -1; /* stays behind */
 }
 
 .circle {
   border-radius: 50%;
-  background: #000;
+  background: black;
 }
 
 .square {
-  background: #000;
+  background: black;
 }
 
 .triangle {
@@ -188,11 +187,11 @@ All colors MUST be HSL.
   height: 0;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-bottom: 70px solid #000;
+  border-bottom: 70px solid black;
   background: none;
 }
 
-/* Shape positions */
+/* Positions */
 .shape1 { width: 120px; height: 120px; top: 15%; left: 8%; }
 .shape2 { width: 80px; height: 80px; bottom: 20%; right: 12%; }
 .shape3 { width: 100px; height: 100px; top: 35%; right: 25%; }
@@ -201,6 +200,7 @@ All colors MUST be HSL.
 
 /* Floating animation */
 @keyframes float {
-  from { transform: translateY(0px); }
-  to { transform: translateY(25px); }
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(25px); }
 }
+
