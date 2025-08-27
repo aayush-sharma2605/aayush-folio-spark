@@ -182,9 +182,9 @@ All colors MUST be HSL.
 /* Circles */
 .circle1 { width: 150px; height: 150px; top: 15%; left: 10%; }
 .circle2 { width: 100px; height: 100px; bottom: 20%; right: 15%; }
-.circle3 { width: 120px; height: 120px; top: 30%; right: 20%; }
+.circle3 { width: 120px; height: 120px; top: 5%; right: 20%; }
 .circle4 { width: 90px; height: 90px; bottom: 10%; left: 25%; }
-.circle5 { width: 70px; height: 70px; top: 60%; left: 50%; }
+.circle5 { width: 70px; height: 70px; top: 35%; right: 20%; }
 
 /* Squares */
 .square1 { width: 100px; height: 100px; top: 25%; left: 5%; }
