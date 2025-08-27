@@ -14,14 +14,15 @@ import hackingImage from "@/assets/hacking-project.jpg";
 const projects = [
   {
     id: "solar-panel",
-    title: "🔆 Moving Solar Panel with Arduino & LDR Sun Tracking",
+    title: "☀️ Moving Solar Panel with Arduino & LDR Sun Tracking",
     shortDescription: "Automated solar panel system that tracks sunlight using Arduino and sensors for maximum efficiency.",
     image: solarPanelImage,
     problem: "Fixed panels waste energy by not following sunlight.",
     solution: "Arduino + LDR sensors track the sun and adjust orientation.",
     tools: ["Arduino", "C++", "Servo Motors", "IoT concepts"],
     role: "Designed hardware, programmed sensors, tested system.",
-    impact: "Increased solar efficiency and showcased renewable energy automation."
+    impact: "Increased energy efficiency by ensuring panels always face the sun.",
+    linkedinUrl: "https://www.linkedin.com/posts/aayush-sharma-52b9b0324_smart-india-hackathon-2024-activity-7322839252638019584-ZsHi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIEafMBjlISKYpA5_OAf1tFiPr1p53_U38"
   },
   {
     id: "jarvis",

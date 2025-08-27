@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { X, ExternalLink } from "lucide-react";
 
 interface ProjectDetails {
   id: string;
@@ -12,6 +13,7 @@ interface ProjectDetails {
   tools: string[];
   role: string;
   impact: string;
+  linkedinUrl?: string;
 }
 
 interface ProjectModalProps {
@@ -83,6 +85,17 @@ export const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) =>
                 <h3 className="text-lg font-semibold text-foreground mb-3">Impact</h3>
                 <p className="text-muted-foreground leading-relaxed">{project.impact}</p>
               </div>
+              
+              {project.linkedinUrl && (
+                <div className="pt-6 border-t border-border">
+                  <Button asChild className="w-full gap-2">
+                    <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4" />
+                      🔗 View Project on LinkedIn
+                    </a>
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </div>
