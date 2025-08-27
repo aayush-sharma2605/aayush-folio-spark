@@ -107,7 +107,7 @@ export const Portfolio = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
               Student | Tech Explorer | Problem Solver
             </p>
-            <div className="w-24 h-0.5 bg-primary mx-auto"></div>
+            <div className="w-24 h-0.5 bg-primary mx-auto animate-bounce-gentle"></div>
           </div>
         </div>
       </section>
