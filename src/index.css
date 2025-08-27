@@ -166,26 +166,41 @@ All colors MUST be HSL.
   }
 }
 
-/*added this now */
-.circle1 {
-  width: 150px;
-  height: 150px;
-  top: 20%;
-  left: 10%;
+/* Background floating shapes */
+.background-shape {
+  position: absolute;
+  animation: float 6s ease-in-out infinite alternate;
+  opacity: 0.08;
+  z-index: 0;
 }
 
-.circle2 {
-  width: 100px;
-  height: 100px;
-  bottom: 15%;
-  right: 15%;
+.circle {
+  border-radius: 50%;
+  background: #000;
 }
 
+.square {
+  background: #000;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid #000;
+  background: none;
+}
+
+/* Shape sizes + positions */
+.shape1 { width: 120px; height: 120px; top: 15%; left: 8%; }
+.shape2 { width: 80px; height: 80px; bottom: 20%; right: 12%; }
+.shape3 { width: 100px; height: 100px; top: 35%; right: 25%; }
+.shape4 { width: 70px; height: 70px; bottom: 10%; left: 20%; }
+.shape5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/* Floating animation */
 @keyframes float {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(20px);
-  }
+  from { transform: translateY(0px); }
+  to { transform: translateY(25px); }
 }
