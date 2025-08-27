@@ -44,7 +44,8 @@ const projects = [
     solution: "AI + satellite data to detect vegetation and generate a \"green score.\"",
     tools: ["Python", "ML", "Computer Vision", "Satellite APIs"],
     role: "Trained AI model, integrated APIs, built scoring system.",
-    impact: "Scalable way to monitor sustainability and help in urban planning."
+    impact: "Scalable way to monitor sustainability and help in urban planning.",
+    prototypeUrl: "https://www.figma.com/make/GGNVVWWekJP6i0xDJyplTy/GreenIndex-Map-Dashboard?node-id=0-1&p=f&t=OnwKir8TST990OGy-0&fullscreen=1"
   },
   {
     id: "hacking",
@@ -176,17 +177,23 @@ export const Portfolio = () => {
                 Let's connect and build something amazing together.
               </p>
               <div className="flex justify-center gap-6">
-                <Button variant="outline" size="lg" className="gap-2">
-                  <Mail className="h-5 w-5" />
-                  Email
+                <Button asChild variant="outline" size="lg" className="gap-2">
+                  <a href="mailto:aayush.sharma2605@gmail.com">
+                    <Mail className="h-5 w-5" />
+                    Email
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2">
-                  <Github className="h-5 w-5" />
-                  GitHub
+                <Button asChild variant="outline" size="lg" className="gap-2">
+                  <a href="https://github.com/aayush-sharma2605" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-5 w-5" />
+                    GitHub
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2">
-                  <Linkedin className="h-5 w-5" />
-                  LinkedIn
+                <Button asChild variant="outline" size="lg" className="gap-2">
+                  <a href="https://www.linkedin.com/in/aayush-sharma-52b9b0324/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-5 w-5" />
+                    LinkedIn
+                  </a>
                 </Button>
               </div>
             </div>

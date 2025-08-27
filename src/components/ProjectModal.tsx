@@ -14,6 +14,7 @@ interface ProjectDetails {
   role: string;
   impact: string;
   linkedinUrl?: string;
+  prototypeUrl?: string;
 }
 
 interface ProjectModalProps {
@@ -86,14 +87,24 @@ export const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) =>
                 <p className="text-muted-foreground leading-relaxed">{project.impact}</p>
               </div>
               
-              {project.linkedinUrl && (
-                <div className="pt-6 border-t border-border">
-                  <Button asChild className="w-full gap-2">
-                    <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                      🔗 View Certificate on LinkedIn
-                    </a>
-                  </Button>
+              {(project.linkedinUrl || project.prototypeUrl) && (
+                <div className="pt-6 border-t border-border space-y-3">
+                  {project.linkedinUrl && (
+                    <Button asChild className="w-full gap-2">
+                      <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                        🔗 View Certificate on LinkedIn
+                      </a>
+                    </Button>
+                  )}
+                  {project.prototypeUrl && (
+                    <Button asChild variant="outline" className="w-full gap-2">
+                      <a href={project.prototypeUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                        Click here to view prototype
+                      </a>
+                    </Button>
+                  )}
                 </div>
               )}
             </div>
