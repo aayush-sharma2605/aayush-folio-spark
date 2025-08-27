@@ -97,22 +97,28 @@ export const Portfolio = () => {
     setSelectedProject(null);
   };
 
-  return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="fade-in-up">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6">
-              <span className="hero-text">Aayush</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
-              Student | Tech Explorer | Problem Solver
-            </p>
-            <div className="w-24 h-0.5 bg-primary mx-auto animate-bounce-gentle"></div>
-          </div>
+ return (
+  <div className="min-h-screen bg-background">
+    {/* Hero Section */}
+    <section className="relative min-h-screen flex items-center justify-center px-6">
+      {/* Decorative Circle */}
+      <div className="absolute top-8 right-8 w-24 h-24 rounded-full bg-primary/20"></div>
+
+      <div className="text-center max-w-4xl mx-auto">
+        <div className="fade-in-up">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6">
+            <span className="hero-text">Aayush</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
+            Student | Tech Explorer | Problem Solver
+          </p>
+          <div className="w-24 h-0.5 bg-primary mx-auto animate-bounce-gentle"></div>
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
+);
+
 
       {/* About Section */}
       <section className="py-section px-6">
