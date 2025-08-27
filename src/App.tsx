@@ -11,28 +11,23 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <BrowserRouter>
-        <div className="relative min-h-screen overflow-hidden">
-          {/* Floating Shapes */}
-          <div className="background-shape circle shape1"></div>
-          <div className="background-shape circle shape2"></div>
-          <div className="background-shape square shape3"></div>
-          <div className="background-shape square shape4"></div>
-          <div className="background-shape triangle shape5"></div>
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background floating circles */}
+        <div className="background-circle circle1"></div>
+        <div className="background-circle circle2"></div>
 
-          {/* Actual Content */}
-          <div className="relative z-10">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </div>
-        </div>
-
-        {/* Toasts */}
+        {/* Toast + UI providers */}
         <Toaster />
         <Sonner />
-      </BrowserRouter>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );
