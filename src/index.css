@@ -165,42 +165,34 @@ All colors MUST be HSL.
   z-index: 0; /* make sure it's behind everything */
   }
 }
-
-.background-shape {
+/*code */
+.background-circle {
   position: absolute;
-  animation: float 6s ease-in-out infinite alternate;
-  opacity: 0.08;
-  z-index: -1; /* stays behind */
-}
-
-.circle {
   border-radius: 50%;
-  background: black;
+  background: rgba(0, 0, 0, 0.05);
+  animation: float 6s ease-in-out infinite alternate;
+  z-index: 0; /* make sure it's behind everything */
 }
 
-.square {
-  background: black;
+.circle1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
 }
 
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 70px solid black;
-  background: none;
+.circle2 {
+  width: 100px;
+  height: 100px;
+  bottom: 15%;
+  right: 15%;
 }
 
-/* Positions */
-.shape1 { width: 120px; height: 120px; top: 15%; left: 8%; }
-.shape2 { width: 80px; height: 80px; bottom: 20%; right: 12%; }
-.shape3 { width: 100px; height: 100px; top: 35%; right: 25%; }
-.shape4 { width: 70px; height: 70px; bottom: 10%; left: 20%; }
-.shape5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-
-/* Floating animation */
 @keyframes float {
-  0%   { transform: translateY(0px); }
-  100% { transform: translateY(25px); }
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
 }
-
