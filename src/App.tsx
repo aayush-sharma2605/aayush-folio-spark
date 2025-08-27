@@ -12,9 +12,22 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <div className="relative min-h-screen overflow-hidden">
-        {/* Background floating circles */}
-        <div className="background-circle circle1"></div>
-        <div className="background-circle circle2"></div>
+  {/* Floating Shapes */}
+  <div className="background-shape circle shape1"></div>
+  <div className="background-shape circle shape2"></div>
+  <div className="background-shape square shape3"></div>
+  <div className="background-shape square shape4"></div>
+  <div className="background-shape triangle shape5"></div>
+
+  {/* Actual Content */}
+  <div className="relative z-10">
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </div>
+</div>
+
 
         {/* Toast + UI providers */}
         <Toaster />
