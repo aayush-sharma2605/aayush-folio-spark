@@ -45,19 +45,12 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -157,42 +150,53 @@ All colors MUST be HSL.
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
-  .background-circle {
+}
+
+/* ---------------- Floating Shapes ---------------- */
+
+.background-shape {
   position: absolute;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.05);
   animation: float 6s ease-in-out infinite alternate;
-  z-index: 0; /* make sure it's behind everything */
-  }
+  opacity: 0.08;
+  z-index: 0; /* behind everything */
 }
-/*code */
-.background-circle {
-  position: absolute;
+
+.circle {
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.05);
-  animation: float 6s ease-in-out infinite alternate;
-  z-index: 0; /* make sure it's behind everything */
+  background: black;
 }
 
-.circle1 {
-  width: 150px;
-  height: 150px;
-  top: 20%;
-  left: 10%;
+.square {
+  background: black;
 }
 
-.circle2 {
-  width: 100px;
-  height: 100px;
-  bottom: 15%;
-  right: 15%;
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid black;
+  background: none;
 }
 
+/* Circles */
+.circle1 { width: 150px; height: 150px; top: 15%; left: 10%; }
+.circle2 { width: 100px; height: 100px; bottom: 20%; right: 15%; }
+.circle3 { width: 120px; height: 120px; top: 30%; right: 20%; }
+.circle4 { width: 90px; height: 90px; bottom: 10%; left: 25%; }
+.circle5 { width: 70px; height: 70px; top: 60%; left: 50%; }
+
+/* Squares */
+.square1 { width: 100px; height: 100px; top: 25%; left: 5%; }
+.square2 { width: 80px; height: 80px; top: 45%; right: 10%; }
+.square3 { width: 60px; height: 60px; bottom: 25%; left: 35%; }
+.square4 { width: 90px; height: 90px; bottom: 15%; right: 25%; }
+
+/* Triangle */
+.triangle1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/* Floating animation */
 @keyframes float {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(20px);
-  }
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(25px); }
 }
