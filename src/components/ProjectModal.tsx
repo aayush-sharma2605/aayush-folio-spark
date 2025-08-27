@@ -91,7 +91,7 @@ export const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) =>
                   <Button asChild className="w-full gap-2">
                     <a href={project.linkedinUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4" />
-                      🔗 View Project on LinkedIn
+                      🔗 View Certificate on LinkedIn
                     </a>
                   </Button>
                 </div>
