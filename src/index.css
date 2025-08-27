@@ -157,4 +157,35 @@ All colors MUST be HSL.
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
+  .background-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  animation: float 6s ease-in-out infinite alternate;
+  z-index: 0; /* make sure it's behind everything */
+}
+/*added this now */
+.circle1 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 10%;
+}
+
+.circle2 {
+  width: 100px;
+  height: 100px;
+  bottom: 15%;
+  right: 15%;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
 }
