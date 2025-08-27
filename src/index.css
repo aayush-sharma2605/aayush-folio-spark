@@ -166,12 +166,12 @@ All colors MUST be HSL.
   }
 }
 
-/* Background floating shapes */
+/* Floating background shapes */
 .background-shape {
   position: absolute;
   animation: float 6s ease-in-out infinite alternate;
   opacity: 0.08;
-  z-index: 0;
+  z-index: -1; /* safer than 0, guarantees it's behind content */
 }
 
 .circle {
@@ -186,13 +186,13 @@ All colors MUST be HSL.
 .triangle {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 80px solid #000;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #000;
   background: none;
 }
 
-/* Shape sizes + positions */
+/* Shape positions */
 .shape1 { width: 120px; height: 120px; top: 15%; left: 8%; }
 .shape2 { width: 80px; height: 80px; bottom: 20%; right: 12%; }
 .shape3 { width: 100px; height: 100px; top: 35%; right: 25%; }
