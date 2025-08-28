@@ -103,7 +103,7 @@ export const Portfolio = () => {
       <section className="min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-4xl mx-auto">
           <div className="fade-in-up">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-flipInX">
               <span className="hero-text">Aayush</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
