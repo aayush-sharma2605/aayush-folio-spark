@@ -201,30 +201,4 @@ All colors MUST be HSL.
   100% { transform: translateY(25px); }
 }
 
-/*new animation */
-@keyframes flipInX {
-  from { transform: perspective(400px) rotateX(90deg); opacity: 0; }
-  40% { transform: perspective(400px) rotateX(-20deg); }
-  60% { transform: perspective(400px) rotateX(10deg); opacity: 1; }
-  80% { transform: perspective(400px) rotateX(-5deg); }
-  to { transform: perspective(400px) rotateX(0deg); opacity: 1; }
-}
-.flipInX { animation: flipInX 1s ease-out forwards; }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-up { animation: fadeInUp 1s ease forwards 0.4s; }
-
-@keyframes float {
-  from { transform: translateY(0px); }
-  to { transform: translateY(25px); }
-}
-.float { animation: float 5s ease-in-out infinite alternate; }
-
-@keyframes growLine {
-  from { width: 0; }
-  to { width: 80px; }
-}
-.grow-line { animation: growLine 1s forwards 0.8s; }
