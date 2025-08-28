@@ -53,8 +53,8 @@ const projects = [
     shortDescription: "A personal exploration of cybersecurity through CTFs, penetration testing, and ethical hacking tools.",
     image: hackingImage,
     problem: "Learning cybersecurity feels overwhelming with scattered resources.",
-    solution: "Documented my journey — CTFs, pen-testing basics, and hands-on experiments.",
-    tools: ["Kali Linux", "Wireshark", "Nmap", "Burp Suite", "Python"],
+    solution: "Documented my journey — pen-testing basics, and hands-on experiments.",
+    tools: ["Kali Linux", "Python"],
     role: "Practiced, explored vulnerabilities, and solved challenges.",
     impact: "Built a hacker's problem-solving mindset and strong security foundation."
   }
